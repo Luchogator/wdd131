@@ -7,7 +7,7 @@
 
 /* General Styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     background-color: #f9f9f9;
     color: #333;
@@ -175,7 +175,7 @@ main {
 .resources ul {
     list-style: disc;
     padding: 0;
-    margin: 170px auto;
+    margin: 140px auto;
     width: fit-content;
     text-align: left;
 }
