@@ -1,11 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals by Luis Eleazar Lizano Rojas">
+    <meta name="author" content="Luis Eleazar Lizano Rojas">
+    <title>WDD 131: Dynamic Web Fundamentals - Luis Lizano</title>
+    <link rel="stylesheet" href="styles/base.css">
 </head>
+
 <body>
-    <h1>WDD 131 - Lizano</h1>
+    <!-- Header -->
+    <header>
+        <h1>WDD 131: Dynamic Web Fundamentals - Luis Lizano</h1>
+        <nav>
+            <ul>
+                <li><a href="https://linkedin.com/in/luislizano/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://byupw.instructure.com/" target="_blank">Canvas</a></li>
+                <li>
+                    <a href="https://www.churchofjesuschrist.org/study/scriptures/ot/josh/1.9?lang=eng" target="_blank">
+                        Scripture
+                    </a>
+                </li>
+                <li><a href="#">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Main Content -->
+        <section class="main-content">
+            <div class="about-location">
+                <div class="about-me">
+                    <h2>About Me</h2>
+                    <div class="profile">
+                        <p>
+                            My name is Luis Eleazar Lizano Rojas, a Software Development
+                            student at BYU-Idaho with a strong background in data analysis,
+                            logistics, and software engineering. I currently work for FamilySearch,
+                            contributing to genealogical projects that connect people with their
+                            heritage. My knowledge extends to economics, which I apply to personal
+                            finance and investment strategies, alongside my passion for exploring nature,
+                            creating music, and improving through continuous learning.
+                        </p>
+                        <img src="images/profile.jpg" alt="Profile picture of Luis Lizano">
+                    </div>
+                </div>
+                <div class="location">
+                    <h2>Tarapoto, Peru</h2>
+                    <div class="location-content">
+                        <div class="image-container">
+                            <img src="images/peru.jpg" alt="Collage representing Peru">
+                            <p class="caption">A glimpse into the natural beauty of Peru</p>
+                        </div>
+                        <p class="long-description">
+                            Peru is a country rich in culture, history, and biodiversity. Known for its landmarks like
+                            Machu Picchu and the Amazon rainforest, Peru offers diverse landscapes,
+                            from the Andes mountains to tropical jungles. Tarapoto, in the Amazon region, is known as
+                            the "City of Palms," offering waterfalls, lakes, and breathtaking views for travelers.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sidebar -->
+        <aside class="resources">
+            <h2>Web Dev Resources</h2>
+            <ul>
+                <li><a href="https://www.freecodecamp.org/" target="_blank">FreeCodeCamp</a></li>
+                <li><a href="https://www.w3schools.com/" target="_blank">W3 Schools</a></li>
+                <li><a href="https://www.edx.org/" target="_blank">edX</a></li>
+                <li><a href="https://developer.mozilla.org/" target="_blank">Mozilla Developer Network (MDN)</a></li>
+                <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+                <li><a href="https://boards.4chan.org/g/catalog" target="_blank">4chan /g/ Catalog</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>© <span id="currentYear"></span> 🐊 Luis E. Lizano Rojas 🐊 - Tarapoto, Peru</p>
+        <p id="lastModified">Last Modified: <span id="lastModifiedDate"></span></p>
+    </footer>
+
+    <script src="scripts/getdates.js" defer></script>
 </body>
+
 </html>
