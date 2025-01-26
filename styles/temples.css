@@ -112,6 +112,11 @@ footer p#lastModified {
     font-weight: bold;
 }
 
+#lastModifiedDate {
+    color: yellow;
+    font-weight: bold; 
+}
+
 /* Show the navigation menu when the hamburger is clicked */
 nav ul.show {
     display: flex;
