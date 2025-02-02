@@ -1,0 +1,115 @@
+/* ========== place-large.css ==========
+   Styles for screens >= 960px
+*/
+
+@media screen and (min-width: 960px) {
+
+    /* Hero-like approach for the main area */
+    main {
+      position: relative;
+      width: 100%;
+      height: 90vh; 
+      overflow: hidden;
+    }
+  
+    .background-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+    .background-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  
+    .info-container {
+      position: relative;
+      width: 100%;
+      max-width: 1200px;
+      height: 100%;
+      margin: 0 auto;
+      text-align: left;
+    }
+  
+    /* Data & Weather boxes in corners, with white background */
+    .data-box,
+    .weather-box {
+      position: absolute;
+      width: 420px;
+      background-color: rgba(255, 255, 255, 0.9);
+      color: #000;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      padding: 1.5rem;
+    }
+  
+    .data-box {
+      top: 5%;
+      left: 0;
+      transform: translateX(-150px);
+    }
+    .weather-box {
+      bottom: 0%;
+      right: 0;
+      transform: translateX(150px)
+    }
+  
+    /* Hide the mobile SVG in desktop */
+    .weather-icon-mobile {
+      display: none;
+    }
+  
+    /* Instead, use a bigger emoticon for "Weather" via ::after */
+    .weather-box h2::after {
+      content: " ☀️";
+      margin-left: 0.5rem;
+      font-size: 1.4rem;
+      vertical-align: middle;
+    }
+  
+    /* Titles in the boxes with a colored bar behind, offset to the left */
+    .data-box h2,
+    .weather-box h2 {
+      position: relative;
+      color: #fff;
+      background-color: #b40000;
+      /* Some padding and radius for style */
+      padding: 0.5rem 1rem;
+      border-top-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+  
+      /* Negative margin to "overflow" to the left */
+      margin: 0 0 1rem -2rem;
+      display: inline-block;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    }
+  
+    /* The table keeps alignment. 
+       We'll keep the same style from mobile with slight changes if needed. */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th {
+      text-align: right;
+      font-weight: bold;
+      padding: 0.5rem;
+      width: 40%;
+    }
+    td {
+      text-align: left;
+      padding: 0.5rem;
+      width: 60%;
+    }
+    tr {
+      border-bottom: 1px solid #999;
+    }
+    tr:last-child {
+      border-bottom: none;
+    }
+  
+  }
+  

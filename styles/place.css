@@ -1,0 +1,116 @@
+/* ========== place.css ==========
+   Base (mobile-first) styles
+*/
+
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+}
+
+/* Header: same thickness as footer (12px 0) */
+header {
+  background-color: #d00000; /* Swiss red */
+  color: #fff;
+  text-align: center;
+  padding: 12px 0;
+  font-size: 1.8rem;
+}
+
+/* Main (mobile) */
+main {
+  display: block;
+  width: 100%;
+  position: relative;
+}
+
+/* Background image (mobile) */
+.background-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.background-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Container for Data & Weather (mobile) */
+.info-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* BOXES in mobile: no visible background or border */
+.data-box,
+.weather-box {
+  margin-bottom: 1.5rem;
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+/* Titles in mobile */
+.data-box h2,
+.weather-box h2 {
+  font-size: 1.4rem;
+  margin: 0 0 1rem 0;
+}
+
+/* SVG icon in mobile, bigger (80px) and below the Weather heading */
+.weather-icon-mobile {
+  display: block;
+  margin: 0 auto 1rem;
+  width: 80px;
+  height: auto;
+}
+
+/* Table for alignment in mobile */
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  text-align: right;
+  font-weight: bold;
+  padding: 0.5rem;
+  width: 40%; 
+}
+td {
+  text-align: left;
+  padding: 0.5rem;
+  width: 60%;
+}
+
+/* Horizontal lines between rows */
+tr {
+  border-bottom: 1px solid #ccc;
+}
+tr:last-child {
+  border-bottom: none;
+}
+
+/* Footer: same thickness as header (12px 0) */
+footer {
+  background-color: #d00000;
+  color: #fff;
+  text-align: center;
+  padding: 30px 0;
+  font-size: 1rem;
+}

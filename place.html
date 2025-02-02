@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Switzerland</title>
+
+  <!-- Mobile-first CSS -->
+  <link rel="stylesheet" href="styles/place.css">
+  <!-- Desktop (large) CSS -->
+  <link rel="stylesheet" href="styles/place-large.css">
+  <!-- JavaScript (wind chill, footer, etc.) -->
+  <script defer src="scripts/place.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>Switzerland</h1>
+  </header>
+
+  <main>
+    <!-- Responsive background image -->
+    <picture class="background-image">
+      <!-- Larger (desktop) -->
+      <source
+        srcset="images/switzerland-large.webp"
+        media="(min-width: 960px)"
+      >
+      <!-- Fallback / mobile -->
+      <img
+        src="images/switzerland-small.webp"
+        alt="Beautiful landscape of Switzerland"
+      >
+    </picture>
+
+    <section class="info-container">
+      <!-- DATA BOX -->
+      <div class="data-box">
+        <h2>Data</h2>
+        <div class="data-content">
+          <table>
+            <tbody>
+              <tr>
+                <th>Area:</th>
+                <td>41,290 km²</td>
+              </tr>
+              <tr>
+                <th>Population:</th>
+                <td>8,703,900</td>
+              </tr>
+              <tr>
+                <th>Capital:</th>
+                <td>Bern</td>
+              </tr>
+              <tr>
+                <th>Languages:</th>
+                <td>German, French, Italian, Romansh</td>
+              </tr>
+              <tr>
+                <th>Currency:</th>
+                <td>Swiss Franc (CHF)</td>
+              </tr>
+              <tr>
+                <th>Time Zone:</th>
+                <td>UTC+1</td>
+              </tr>
+              <tr>
+                <th>Calling Code:</th>
+                <td>+41</td>
+              </tr>
+              <tr>
+                <th>Internet TLD:</th>
+                <td>.ch</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- WEATHER BOX -->
+      <div class="weather-box">
+        <h2>Weather</h2>
+        <div class="weather-content">
+          <!-- SVG icon for mobile below the heading -->
+          <img
+            src="images/weather-icon.svg"
+            alt="Weather Icon"
+            class="weather-icon-mobile"
+          >
+          <table>
+            <tbody>
+              <tr>
+                <th>Temperature:</th>
+                <td><span id="tempValue">30</span> °F</td>
+              </tr>
+              <tr>
+                <th>Conditions:</th>
+                <td>Clear Skies</td>
+              </tr>
+              <tr>
+                <th>Wind:</th>
+                <td>10 mph</td>
+              </tr>
+              <tr>
+                <th>Wind Chill:</th>
+                <td><span id="windChill"></span> °F</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 🐊 Luis E. Lizano Rojas 🐊 - Tarapoto, Peru</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>
