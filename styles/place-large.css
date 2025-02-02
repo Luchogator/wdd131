@@ -46,6 +46,7 @@
       padding: 1.5rem;
     }
   
+    /* Keep your transform-based positioning for the corners */
     .data-box {
       top: 5%;
       left: 0;
@@ -54,7 +55,7 @@
     .weather-box {
       bottom: 0%;
       right: 0;
-      transform: translateX(150px)
+      transform: translateX(150px);
     }
   
     /* Hide the mobile SVG in desktop */
@@ -75,7 +76,7 @@
     .weather-box h2 {
       position: relative;
       color: #fff;
-      background-color: #b40000;
+      background-color: var(--title-bg); /* Use the variable for the bar */
       /* Some padding and radius for style */
       padding: 0.5rem 1rem;
       border-top-left-radius: 8px;
@@ -87,8 +88,7 @@
       box-shadow: 0 4px 8px rgba(0,0,0,0.4);
     }
   
-    /* The table keeps alignment. 
-       We'll keep the same style from mobile with slight changes if needed. */
+    /* The table remains the same alignment logic */
     table {
       width: 100%;
       border-collapse: collapse;
@@ -110,6 +110,5 @@
     tr:last-child {
       border-bottom: none;
     }
-  
   }
   
