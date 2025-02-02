@@ -46,7 +46,10 @@
       padding: 1.5rem;
     }
   
-    /* Keep your transform-based positioning for the corners */
+    /* 
+      Mantén la posición con transform 
+      para no alterar tu layout actual
+    */
     .data-box {
       top: 5%;
       left: 0;
@@ -76,7 +79,7 @@
     .weather-box h2 {
       position: relative;
       color: #fff;
-      background-color: var(--title-bg); /* Use the variable for the bar */
+      background-color: var(--title-bg); /* Use the variable for dark red */
       /* Some padding and radius for style */
       padding: 0.5rem 1rem;
       border-top-left-radius: 8px;
@@ -86,6 +89,12 @@
       margin: 0 0 1rem -2rem;
       display: inline-block;
       box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  
+      /* The font-family is already set in place.css for h2, 
+         but this reaffirms Oswald in desktop if needed:
+      */
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
     }
   
     /* The table remains the same alignment logic */

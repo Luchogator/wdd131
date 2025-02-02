@@ -21,9 +21,9 @@
   --title-bg: #b40000;  /* Dark red for desktop titles */
 }
 
-/* Body */
+/* Body: Roboto as default font */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: #fff;
 }
 
@@ -34,6 +34,18 @@ header {
   text-align: center;
   padding: 12px 0;
   font-size: 1.8rem;
+}
+
+/* 
+  Let’s also apply the second font (Oswald) to headings:
+  h1, h2
+  so that in mobile the headings use the same style.
+*/
+header h1,
+.data-box h2,
+.weather-box h2 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700; /* Use bold for headings */
 }
 
 /* Main (mobile) */
@@ -74,7 +86,7 @@ main {
   border-radius: 0;
 }
 
-/* Titles in mobile */
+/* Titles in mobile (we already added font-family above) */
 .data-box h2,
 .weather-box h2 {
   font-size: 1.4rem;
@@ -117,8 +129,10 @@ tr:last-child {
   border-bottom: none;
 }
 
-/* Footer: si quieres el mismo grosor que el header, usa 12px 0.
-   Mantengo 30px 0 como en tu código original (cámbialo si gustas) */
+/* Footer: 
+   si quieres el mismo grosor que el header, usa 12px 0.
+   Aquí está 30px 0 como en tu versión anterior.
+*/
 footer {
   background-color: var(--main-bg); /* Use the variable */
   color: #fff;
