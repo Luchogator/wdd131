@@ -25,7 +25,8 @@ header h1 {
 nav ul {
     list-style: none;
     padding: 0;
-    display: none; /* Hidden by default */
+    display: none;
+    /* Hidden by default */
     flex-direction: column;
     align-items: flex-start;
     background-color: #001a33;
@@ -63,7 +64,8 @@ button.hamburger {
 
 /* Main content */
 main {
-    max-width: 1600px; /* Expanded width for more space */
+    max-width: 1600px;
+    /* Expanded width for more space */
     margin: 20px auto;
     padding: 0 20px;
     text-align: center;
@@ -85,7 +87,8 @@ figure {
 
 figure img {
     width: 100%;
-    max-width: none; /* Remove restrictions on width */
+    max-width: none;
+    /* Remove restrictions on width */
     height: auto;
     object-fit: cover;
     border-radius: 5px;
@@ -117,7 +120,7 @@ footer p#lastModified {
 
 #lastModifiedDate {
     color: yellow;
-    font-weight: bold; 
+    font-weight: bold;
 }
 
 /* Show the navigation menu when the hamburger is clicked */
@@ -142,7 +145,8 @@ nav ul.show {
     }
 
     nav ul {
-        display: flex !important; /* Always show for large screens */
+        display: flex !important;
+        /* Always show for large screens */
         flex-direction: row;
         gap: 1.5rem;
         position: static;
@@ -150,11 +154,13 @@ nav ul.show {
     }
 
     button.hamburger {
-        display: none; /* Hide on large screens */
+        display: none;
+        /* Hide on large screens */
     }
 
     .grid {
-        grid-template-columns: repeat(4, 1fr); /* 4 columns for more expansion */
+        grid-template-columns: repeat(4, 1fr);
+        /* 4 columns for more expansion */
         gap: 20px;
     }
 }
@@ -211,5 +217,31 @@ button {
 }
 
 button:hover {
+    text-decoration: underline;
+}
+
+nav ul li a {
+    display: inline-block;
+    background-color: #002f5e;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    background-color: #004080;
+}
+
+.temple-card h3 a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.temple-card h3 a:hover {
     text-decoration: underline;
 }
