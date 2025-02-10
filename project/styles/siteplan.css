@@ -1,0 +1,84 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #FFFFFF;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #0047AB;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-family: 'Lora', serif;
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.card {
+    background: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #0047AB;
+}
+
+/* Wireframes Section */
+.wireframes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.wireframes img {
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.desktop-wireframe {
+    max-width: 95%;
+}
+
+.mobile-wireframe {
+    max-width: 50%;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #0047AB;
+    color: white;
+    margin-top: 30px;
+}
+
+#lastModified {
+    color: yellow;
+    font-weight: bold;
+}
+
+.intro h2 {
+    text-align: center;
+}
