@@ -1,6 +1,6 @@
 /* ======= Global / Layout ======= */
 body {
-    font-family: 'Raleway', sans-serif; /* Using Raleway from Google Fonts */
+    font-family: 'Raleway', sans-serif;
     background-color: #f4f4f4;
     color: #333;
     margin: 0;
@@ -36,12 +36,12 @@ body {
     margin-top: 5px;
   }
   
-  /* 
+  /*
     Indicates the field is required
-    (Add a red asterisk for user clarity)
+    (Use darker red #990000 for better contrast on white)
   */
   .required-asterisk {
-    color: red;
+    color: #990000;
     margin-left: 4px;
     font-size: 1.1em;
   }
@@ -50,7 +50,7 @@ body {
   select,
   textarea {
     width: 100%;
-    box-sizing: border-box; /* Helps control overflow with padding */
+    box-sizing: border-box;
     padding: 8px;
     margin: 5px 0;
     border: 1px solid #ccc;

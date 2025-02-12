@@ -17,10 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Populate the <select> using the array
     products.forEach(product => {
       const option = document.createElement("option");
-      // The 'value' is the product's id as required
-      option.value = product.id;
-      // Display the product's name in the dropdown
-      option.textContent = product.name;
+      option.value = product.id; // 'value' is the product id as required
+      option.textContent = product.name; // Display the product's name
       productSelect.appendChild(option);
     });
   });

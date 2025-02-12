@@ -1,6 +1,6 @@
 /*
   This script increments and displays a 'reviewCount' from localStorage
-  every time the 'review.html' page is loaded.
+  each time 'review.html' is loaded (i.e., each form submission).
 */
 document.addEventListener("DOMContentLoaded", () => {
     // Retrieve existing count or set to 0 if not found
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
       count = parseInt(count, 10);
     }
   
-    // Increment by 1 each time user lands on review.html
+    // Increment by 1
     count += 1;
   
     // Update localStorage

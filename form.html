@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Lowercase charset to satisfy the tool -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Product Review Form" />
-  <meta name="author" content="Luis Eleazar Lizano Rojas" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Product Review Form">
+  <meta name="author" content="Luis Eleazar Lizano Rojas">
   <title>Product Review</title>
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts (Raleway example) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
-  <!-- Link to your main form CSS -->
-  <link rel="stylesheet" href="styles/form.css" />
+  <!-- Link to your main form CSS (no trailing slash) -->
+  <link rel="stylesheet" href="styles/form.css">
 
-  <!-- Script to populate the product select, etc. -->
+  <!-- Script to populate the product select, etc. (no trailing slash) -->
   <script defer src="scripts/form.js"></script>
 </head>
 <body>
@@ -45,23 +44,23 @@
         <div class="stars">
           <label>
             <span>★</span>
-            <input type="radio" name="rating" value="1" required />
+            <input type="radio" name="rating" value="1" required>
           </label>
           <label>
             <span>★★</span>
-            <input type="radio" name="rating" value="2" />
+            <input type="radio" name="rating" value="2">
           </label>
           <label>
             <span>★★★</span>
-            <input type="radio" name="rating" value="3" />
+            <input type="radio" name="rating" value="3">
           </label>
           <label>
             <span>★★★★</span>
-            <input type="radio" name="rating" value="4" />
+            <input type="radio" name="rating" value="4">
           </label>
           <label>
             <span>★★★★★</span>
-            <input type="radio" name="rating" value="5" />
+            <input type="radio" name="rating" value="5">
           </label>
         </div>
       </fieldset>
@@ -70,7 +69,7 @@
       <label for="installation-date">
         <strong>Date of Installation <span class="required-asterisk">*</span></strong>
       </label>
-      <input type="date" id="installation-date" name="installation-date" required />
+      <input type="date" id="installation-date" name="installation-date" required>
 
       <!-- Features (checkboxes; optional) -->
       <fieldset class="features">
@@ -78,19 +77,19 @@
         <p><em>(Check all that apply)</em></p>
         <div class="checkbox-group">
           <label>
-            <input type="checkbox" name="features" value="Durability" />
+            <input type="checkbox" name="features" value="Durability">
             Durability
           </label>
           <label>
-            <input type="checkbox" name="features" value="Ease of Use" />
+            <input type="checkbox" name="features" value="Ease of Use">
             Ease of Use
           </label>
           <label>
-            <input type="checkbox" name="features" value="Performance" />
+            <input type="checkbox" name="features" value="Performance">
             Performance
           </label>
           <label>
-            <input type="checkbox" name="features" value="Design" />
+            <input type="checkbox" name="features" value="Design">
             Design
           </label>
         </div>
@@ -102,10 +101,10 @@
 
       <!-- User Name (optional) -->
       <label for="username"><strong>Your Name (Optional)</strong></label>
-      <input type="text" id="username" name="username" />
+      <input type="text" id="username" name="username">
 
       <!-- Submit Button: EXACTLY one, with value="Submit" -->
-      <input type="submit" value="Submit" />
+      <input type="submit" value="Submit">
     </form>
   </main>
 
