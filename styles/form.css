@@ -1,0 +1,139 @@
+/* ======= Global / Layout ======= */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  header {
+    background-color: #003366;
+    color: white;
+    padding: 20px 0;
+  }
+  
+  main {
+    /* Center container with a max width for readability */
+    max-width: 550px;
+    margin: 20px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: left;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-top: 5px;
+  }
+  
+  input, select, textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* 
+    This class is for the asterisk that visually indicates 
+    a field is required. The color is set to red.
+  */
+  .required-asterisk {
+    color: red;
+    margin-left: 4px;
+    font-size: 1.1em;
+  }
+  
+  /* ======= Rating (Radio) ======= */
+  .rating {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .stars {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 10px;
+  }
+  
+  .stars label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    margin: 0 5px;
+  }
+  
+  .stars span {
+    font-size: 20px;
+  }
+  
+  .rating input {
+    margin-top: 5px;
+  }
+  
+  /* ======= Features (Checkboxes) ======= */
+  .features {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .checkbox-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 15px;
+  }
+  
+  .checkbox-group label {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    column-gap: 8px;
+  }
+  
+  /* ======= Submit Button ======= */
+  button {
+    background-color: #003366;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 5px;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #004b9a;
+  }
+  
+  /* ======= Footer ======= */
+  footer {
+    background-color: #003366;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  #lastModified {
+    color: yellow;
+    font-weight: bold;
+  }
+  

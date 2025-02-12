@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Product Review Form" />
+  <meta name="author" content="Luis Eleazar Lizano Rojas" />
+  <title>Product Review</title>
+
+  <!-- Link to your main form CSS -->
+  <link rel="stylesheet" href="styles/form.css" />
+
+  <!-- Script to populate the product select, etc. -->
+  <script defer src="scripts/form.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Product Review</h1>
+  </header>
+
+  <main>
+    <!-- The form uses GET to send data to 'review.html' -->
+    <form action="review.html" method="get">
+      <!-- Product Name (required) -->
+      <label for="product">
+        <strong>Product Name <span class="required-asterisk">*</span></strong>
+      </label>
+      <select id="product" name="product" required>
+        <option value="" disabled selected>Select a Product ...</option>
+        <!-- Populated dynamically in form.js -->
+      </select>
+
+      <!-- Overall Rating (radio buttons; required) -->
+      <fieldset class="rating">
+        <legend>
+          <strong>Overall Rating</strong>
+          <span class="required-asterisk">*</span>
+        </legend>
+        <div class="stars">
+          <label>
+            <span>★</span>
+            <input type="radio" name="rating" value="1" required />
+          </label>
+          <label>
+            <span>★★</span>
+            <input type="radio" name="rating" value="2" />
+          </label>
+          <label>
+            <span>★★★</span>
+            <input type="radio" name="rating" value="3" />
+          </label>
+          <label>
+            <span>★★★★</span>
+            <input type="radio" name="rating" value="4" />
+          </label>
+          <label>
+            <span>★★★★★</span>
+            <input type="radio" name="rating" value="5" />
+          </label>
+        </div>
+      </fieldset>
+
+      <!-- Date of Installation (required) -->
+      <label for="installation-date">
+        <strong>Date of Installation <span class="required-asterisk">*</span></strong>
+      </label>
+      <input type="date" id="installation-date" name="installation-date" required />
+
+      <!-- Features (checkboxes; optional) -->
+      <fieldset class="features">
+        <legend><strong>Which features did you find useful?</strong></legend>
+        <p><em>(Check all that apply)</em></p>
+        <div class="checkbox-group">
+          <label>
+            <input type="checkbox" name="features" value="Durability" />
+            Durability
+          </label>
+          <label>
+            <input type="checkbox" name="features" value="Ease of Use" />
+            Ease of Use
+          </label>
+          <label>
+            <input type="checkbox" name="features" value="Performance" />
+            Performance
+          </label>
+          <label>
+            <input type="checkbox" name="features" value="Design" />
+            Design
+          </label>
+        </div>
+      </fieldset>
+
+      <!-- Written Review (optional) -->
+      <label for="review"><strong>Written Review (Optional)</strong></label>
+      <textarea id="review" name="review"></textarea>
+
+      <!-- User Name (optional) -->
+      <label for="username"><strong>Your Name (Optional)</strong></label>
+      <input type="text" id="username" name="username" />
+
+      <!-- Submit button -->
+      <button type="submit">Post Review</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>©2025 🦎 Luis Eleazar Lizano Rojas 🦎 - Tarapoto, Peru</p>
+    <p id="lastModified">Last Modified: <span id="lastModifiedDate"></span></p>
+  </footer>
+
+  <script>
+    // Display the last modified date of this page
+    document.getElementById("lastModifiedDate").textContent = document.lastModified;
+  </script>
+</body>
+</html>

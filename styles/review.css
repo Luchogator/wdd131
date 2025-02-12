@@ -1,0 +1,91 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F4F4F4;
+    text-align: center;
+    margin: 0;
+}
+
+header {
+    background-color: #002f5e;
+    color: white;
+    padding: 20px;
+    font-size: 1.5rem;
+}
+
+main {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+fieldset {
+    border: none;
+    text-align: left;
+}
+
+legend {
+    font-weight: bold;
+    color: #002f5e;
+    margin-bottom: 5px;
+}
+
+select, input, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 100px;
+}
+
+.rating {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    background-color: #002f5e;
+    color: white;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #004b9a;
+}
+
+footer {
+    background-color: #002f5e;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Review Submitted</title>
+
+  <!-- Reuse your CSS or a separate stylesheet if desired -->
+  <link rel="stylesheet" href="styles/form.css" />
+
+  <!-- Script that handles localStorage for the review counter -->
+  <script defer src="scripts/review.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Thank You for Your Review!</h1>
+  </header>
+
+  <main>
+    <div class="confirmation">
+      <p><strong>Your product review has been submitted successfully.</strong></p>
+      <p>Total Reviews Submitted: <span id="reviewCount">0</span></p>
+      <!-- Optionally, you can parse and display the query string data here if needed -->
+    </div>
+  </main>
+
+  <footer>
+    <p>©2025 🦎 Luis Eleazar Lizano Rojas 🦎 - Tarapoto, Peru</p>
+    <p id="lastModified">Last Modified: <span id="lastModifiedDate"></span></p>
+  </footer>
+
+  <script>
+    // Display the last modified date of this page
+    document.getElementById("lastModifiedDate").textContent = document.lastModified;
+  </script>
+</body>
+</html>
