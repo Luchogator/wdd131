@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Recipes - Cooking for Coders</title>
+  <link rel="stylesheet" href="styles/main.css"/>
+  <link rel="stylesheet" href="styles/main-large.css" media="(min-width: 768px)" />
+  <script defer src="scripts/hamburger.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Cooking for Coders</h1>
+    <p>Fast & Smart Recipes for Developers</p>
+    <button class="hamburger" id="menu-toggle" aria-label="Toggle navigation">☰</button>
+  </header>
+
+  <nav id="nav-menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="recipes.html">Recipes</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="recipe-filter">
+    <h2>Filter Recipes</h2>
+
+    <div class="filter-container">
+      <label>Budget:</label>
+      <button onclick="filterRecipes('budget', 'low')">Low</button>
+      <button onclick="filterRecipes('budget', 'medium')">Medium</button>
+      <button onclick="filterRecipes('budget', 'high')">High</button>
+    </div>
+
+    <div class="filter-container">
+      <label>Ingredients:</label>
+      <button onclick="filterRecipes('ingredients', 'few')">Few</button>
+      <button onclick="filterRecipes('ingredients', 'medium')">Medium</button>
+      <button onclick="filterRecipes('ingredients', 'many')">Many</button>
+    </div>
+
+    <div class="filter-container">
+      <label>Time:</label>
+      <button onclick="filterRecipes('time', 'quick')">Quick</button>
+      <button onclick="filterRecipes('time', 'medium')">Medium</button>
+      <button onclick="filterRecipes('time', 'long')">Long</button>
+    </div>
+
+    <button id="showAll" onclick="showAll()">Show All</button>
+  </section>
+
+  <section class="recipe-grid" id="recipe-list">
+    <!-- All images have loading="lazy" because they're presumably "below the fold" on page load -->
+    <div class="recipe-card low-budget few quick">
+      <img src="images/recipe1.jpg" alt="Avocado Toast" loading="lazy" />
+      <h3>Avocado Toast</h3>
+      <p>Budget: Low | Ingredients: Few | Time: Quick</p>
+    </div>
+    <div class="recipe-card low-budget few quick">
+      <img src="images/recipe2.jpg" alt="Protein Smoothie" loading="lazy" />
+      <h3>Protein Smoothie</h3>
+      <p>Budget: Low | Ingredients: Few | Time: Quick</p>
+    </div>
+    <div class="recipe-card medium-budget medium medium">
+      <img src="images/recipe3.jpg" alt="One-Pan Chicken" loading="lazy" />
+      <h3>One-Pan Chicken</h3>
+      <p>Budget: Medium | Ingredients: Medium | Time: Medium</p>
+    </div>
+    <div class="recipe-card low-budget medium quick">
+      <img src="images/recipe4.jpg" alt="Pasta with Garlic Sauce" loading="lazy" />
+      <h3>Pasta with Garlic Sauce</h3>
+      <p>Budget: Low | Ingredients: Medium | Time: Quick</p>
+    </div>
+    <div class="recipe-card medium-budget many medium">
+      <img src="images/recipe5.jpg" alt="Beef Stir-Fry" loading="lazy" />
+      <h3>Beef Stir-Fry</h3>
+      <p>Budget: Medium | Ingredients: Many | Time: Medium</p>
+    </div>
+    <div class="recipe-card high-budget medium medium">
+      <img src="images/recipe6.jpg" alt="Grilled Salmon" loading="lazy" />
+      <h3>Grilled Salmon</h3>
+      <p>Budget: High | Ingredients: Medium | Time: Medium</p>
+    </div>
+    <div class="recipe-card low-budget few quick">
+      <img src="images/recipe7.jpg" alt="Rice with Vegetables" loading="lazy" />
+      <h3>Rice with Vegetables</h3>
+      <p>Budget: Low | Ingredients: Few | Time: Quick</p>
+    </div>
+    <div class="recipe-card medium-budget many long">
+      <img src="images/recipe8.jpg" alt="Homemade Pizza" loading="lazy" />
+      <h3>Homemade Pizza</h3>
+      <p>Budget: Medium | Ingredients: Many | Time: Long</p>
+    </div>
+    <div class="recipe-card high-budget many long">
+      <img src="images/recipe9.jpg" alt="Baked Lasagna" loading="lazy" />
+      <h3>Baked Lasagna</h3>
+      <p>Budget: High | Ingredients: Many | Time: Long</p>
+    </div>
+    <div class="recipe-card low-budget few quick">
+      <img src="images/recipe10.jpg" alt="Oatmeal Bowl" loading="lazy" />
+      <h3>Oatmeal Bowl</h3>
+      <p>Budget: Low | Ingredients: Few | Time: Quick</p>
+    </div>
+    <div class="recipe-card medium-budget medium medium">
+      <img src="images/recipe11.jpg" alt="Chicken Wrap" loading="lazy" />
+      <h3>Chicken Wrap</h3>
+      <p>Budget: Medium | Ingredients: Medium | Time: Medium</p>
+    </div>
+    <div class="recipe-card high-budget many long">
+      <img src="images/recipe12.jpg" alt="Steak with Vegetables" loading="lazy" />
+      <h3>Steak with Vegetables</h3>
+      <p>Budget: High | Ingredients: Many | Time: Long</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>©2025 🦎 Luis Eleazar Lizano Rojas 🦎 - Tarapoto, Peru</p>
+    <p id="lastModified">Last Modified: <span id="lastModifiedDate"></span></p>
+  </footer>
+
+  <script>
+    document.getElementById("lastModifiedDate").textContent = document.lastModified;
+
+    function filterRecipes(category, value) {
+      let recipes = document.querySelectorAll('.recipe-card');
+
+      recipes.forEach(recipe => {
+        let className = "";
+        if (category === "budget") {
+          className = value + "-budget";
+        } else if (category === "ingredients") {
+          className = value;
+        } else if (category === "time") {
+          className = value;
+        }
+
+        if (recipe.classList.contains(className)) {
+          recipe.style.display = "block";
+        } else {
+          recipe.style.display = "none";
+        }
+      });
+    }
+
+    function showAll() {
+      let recipes = document.querySelectorAll('.recipe-card');
+      recipes.forEach(recipe => {
+        recipe.style.display = "block";
+      });
+    }
+  </script>
+</body>
+</html>

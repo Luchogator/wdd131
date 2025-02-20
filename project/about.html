@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Cooking for Coders</title>
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/main-large.css" media="(min-width: 768px)" />
+  <script defer src="scripts/hamburger.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Cooking for Coders</h1>
+    <p>Fast & Smart Recipes for Developers</p>
+    <button class="hamburger" id="menu-toggle" aria-label="Toggle navigation">☰</button>
+  </header>
+
+  <nav id="nav-menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="recipes.html">Recipes</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="about-container">
+    <section class="about-box">
+      <h2>❓ Why Cooking for Coders?</h2>
+      <p>
+        Cooking for Coders was created to help programmers, students, and busy
+        professionals eat smarter without spending hours in the kitchen.
+      </p>
+    </section>
+
+    <section class="about-box">
+      <h2>🚀 Our Mission</h2>
+      <p>
+        As developers, we know the struggle of balancing coding projects, debugging,
+        and meeting deadlines, often at the cost of our nutrition. Our goal is to
+        provide easy, quick, and nutritious recipes that keep your energy levels up
+        without breaking your workflow.
+      </p>
+    </section>
+
+    <section class="about-box">
+      <h2>🗒️ What You'll Find Here</h2>
+      <ul>
+        <li>Simple and fast recipes (under 30 minutes).</li>
+        <li>Meal prepping strategies for busy weeks.</li>
+        <li>Tips on healthy eating without sacrificing time.</li>
+        <li>Budget-friendly meals tailored for students and remote workers.</li>
+      </ul>
+    </section>
+
+    <section class="about-box">
+      <h2>🤝 Stay Connected</h2>
+      <p>
+        Join our community of coders who love food! Follow us for recipe updates,
+        cooking challenges, and more.
+      </p>
+      <p><a href="contact.html" class="contact-link">Contact Us</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>©2025 🦎 Luis Eleazar Lizano Rojas 🦎 - Tarapoto, Peru</p>
+    <p id="lastModified">Last Modified: <span id="lastModifiedDate"></span></p>
+  </footer>
+
+  <script>
+    document.getElementById("lastModifiedDate").textContent = document.lastModified;
+  </script>
+</body>
+</html>

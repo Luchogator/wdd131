@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cooking for Coders</title>
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/main-large.css" media="(min-width: 768px)" />
+  <script defer src="scripts/hamburger.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Cooking for Coders</h1>
+    <p>Fast & Smart Recipes for Developers</p>
+    <button class="hamburger" id="menu-toggle" aria-label="Toggle navigation">☰</button>
+  </header>
+
+  <nav id="nav-menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="recipes.html">Recipes</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <h2>Quick and Healthy Meals</h2>
+    <p>Save time, eat smart, and cook efficiently.</p>
+    <a href="recipes.html" class="btn">Find Recipes</a>
+  </section>
+
+  <section class="features">
+    <div class="feature">
+      <h3>⏳ <b>Save Time</b></h3>
+      <p>Meals in 15 minutes.</p>
+      <!-- The hero or top content images typically load immediately, 
+           so leaving out lazy on images in the "above the fold" area is fine. -->
+      <img src="images/save-time.png" alt="Save Time Icon" />
+    </div>
+    <div class="feature">
+      <h3>🥗 <b>Healthy & Nutritious</b></h3>
+      <p>Balanced meals for better performance.</p>
+      <img src="images/healthy-food.png" alt="Healthy Food Icon" />
+    </div>
+    <div class="feature">
+      <h3>💻 <b>Dev-Friendly</b></h3>
+      <p>Recipes optimized for coders.</p>
+      <img src="images/dev-friendly.png" alt="Dev-Friendly Icon" />
+    </div>
+  </section>
+
+  <section class="home-recipes">
+    <h2>Featured Recipes</h2>
+    <div class="home-grid" id="random-recipes"></div>
+  </section>
+
+  <!-- random-recipes.js does the injection, including lazy loading -->
+  <script defer src="scripts/random-recipes.js"></script>
+
+  <footer>
+    <p>©2025 🦎 Luis Eleazar Lizano Rojas 🦎 - Tarapoto, Peru</p>
+    <p id="lastModified">Last Modified: <span id="lastModifiedDate"></span></p>
+  </footer>
+
+  <script>
+    document.getElementById("lastModifiedDate").textContent = document.lastModified;
+  </script>
+</body>
+</html>
